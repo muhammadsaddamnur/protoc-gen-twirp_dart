@@ -4,7 +4,7 @@ import 'package:http/http.dart';
 import 'package:requester/requester.dart';
 import 'package:twirp_dart_core/twirp_dart_core.dart';
 import 'dart:convert';
-import '../../config/model/model.twirp.dart';
+import '../model/model.twirp.dart';
 abstract class Haberdasher {
 	Future<Hat>makeHat(Size size);
 	Future<Hat>buyHat(Hat hat);
