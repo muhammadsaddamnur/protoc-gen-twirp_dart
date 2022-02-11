@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'config/model/model.twirp.dart';
-import 'config/service/service.twirp.dart';
+import 'example/config/model/model.twirp.dart';
+import 'example/config/service/service.twirp.dart';
 
 Future main(List<String> args) async {
   var service = new DefaultHaberdasher('http://apptree.ngrok.io');

@@ -12,8 +12,20 @@ https://github.com/google/protobuf/releases
 
 While not required for generating the client code, it is required to run the server component of the example.
 
-    go get github.com/twitchtv/twirp/protoc-gen-twirp
-    go get -u github.com/golang/protobuf/protoc-gen-go
+    go install github.com/twitchtv/twirp/protoc-gen-twirp@latest
+    go install github.com/golang/protobuf/protoc-gen-go@latest
+
+if you using MacOS, please following step below :
+add protoc gen to PATH
+```
+export GO_PATH=~/go
+export PATH=$PATH:/$GO_PATH/bin
+```
+
+and then refresh PATH
+```source $HOME/.zshrc```
+
+reference : https://www.youtube.com/watch?v=YVaFoCiQ2SI
     
 ### Dependencies
 
@@ -24,8 +36,8 @@ This plugin requires 2 Dart pub dependencies. In your pubspec.yaml specify:
 
 ## Usage
 
-    go get -u github.com/apptreesoftware/protoc-gen-twirp_dart
-    protoc --twirp_dart_out=./example/dart_client ./example/service.proto
+    go install github.com/apptreesoftware/protoc-gen-twirp_dart@latest
+    protoc --twirp_dart_out=example/dart_client example/config/service/service.proto 
     
 All generated files will be placed relative to the specified output directory for the plugin.  
 This is different behavior than the twirp Go plugin, which places the files relative to the input proto files.

@@ -2,8 +2,7 @@ syntax = "proto3";
 
 package config.service;
 
-import "config/model/model.proto";
-
+import "example/config/model/model.proto";
 
 // A Haberdasher makes hats for clients.
 service Haberdasher {
