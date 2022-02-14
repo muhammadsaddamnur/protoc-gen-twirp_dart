@@ -64,6 +64,8 @@ Future main(List<String> args) async {
 }
 ```
 
+firstly build protoc with custom twirp generator `protoc --twirp_dart_out=. twirp/api_message.proto`
+and then build protoc standard generator `protoc -I=twirp/ --dart_out=./twirp twirp/api_message.proto`
 you can generate with generate.sh, run this command `sh generate.sh`
     
 ### Parameters
