@@ -4,3 +4,5 @@ environment:
   sdk: ">=1.24.3 <3.0.0"
 dependencies:
   twirp_dart_core: any
+  protobuf: ^2.0.1
+  http: ^0.13.4

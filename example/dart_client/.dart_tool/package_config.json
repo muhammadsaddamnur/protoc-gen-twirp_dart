@@ -15,9 +15,15 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/heriyonosim/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11",
+      "rootUri": "file:///Users/heriyonosim/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "fixnum",
+      "rootUri": "file:///Users/heriyonosim/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "http",
@@ -42,6 +48,12 @@
       "rootUri": "file:///Users/heriyonosim/.pub-cache/hosted/pub.dartlang.org/path-1.6.2",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "protobuf",
+      "rootUri": "file:///Users/heriyonosim/.pub-cache/hosted/pub.dartlang.org/protobuf-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "requester",
@@ -80,7 +92,7 @@
       "languageVersion": "1.24"
     }
   ],
-  "generated": "2022-02-11T08:01:05.412963Z",
+  "generated": "2022-02-14T04:48:14.372477Z",
   "generator": "pub",
   "generatorVersion": "2.16.1"
 }
