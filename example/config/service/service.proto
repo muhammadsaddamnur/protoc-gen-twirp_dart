@@ -12,3 +12,4 @@ service Haberdasher {
 
     rpc BuyHat(model.Hat) returns (model.Hat);
 }
+

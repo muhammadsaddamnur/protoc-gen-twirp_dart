@@ -37,7 +37,7 @@ This plugin requires 2 Dart pub dependencies. In your pubspec.yaml specify:
 ## Usage
 
     go install github.com/apptreesoftware/protoc-gen-twirp_dart@latest
-    protoc --twirp_dart_out=example/dart_client example/config/service/service.proto 
+    protoc --twirp_dart_out=dart_client config/service/service.proto 
     
 All generated files will be placed relative to the specified output directory for the plugin.  
 This is different behavior than the twirp Go plugin, which places the files relative to the input proto files.

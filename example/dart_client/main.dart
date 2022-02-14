@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'example/config/model/model.twirp.dart';
-import 'example/config/service/service.twirp.dart';
+import 'config/model/model.twirp.dart';
+import 'config/service/service.twirp.dart';
 
 Future main(List<String> args) async {
-  var service = new DefaultHaberdasher('http://apptree.ngrok.io');
+  var service = DefaultHaberdasher('http://apptree.ngrok.io');
   try {
-    var hat = await service.makeHat(new Size(10));
+    var hat = await service.makeHat(Size(10));
     print(hat);
 
     hat.dictionary["Test"] = 1;
@@ -16,7 +16,7 @@ Future main(List<String> args) async {
     var boughtHat = await service.buyHat(hat);
     print(boughtHat);
   } on Exception catch (e) {
-    print("${e.toString()}");
+    print("->${e.toString()}");
   } catch (e) {
     print(e);
   }
