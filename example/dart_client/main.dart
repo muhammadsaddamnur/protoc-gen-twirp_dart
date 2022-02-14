@@ -1,23 +1,18 @@
 import 'dart:async';
 
+import 'models/api_message.pb.dart';
+import 'models/api_message.twirp.dart';
+
 // import 'config/model/model.twirp.dart';
-import 'config/model/model.pb.dart';
-import 'config/service/service.twirp.dart';
 // import 'config/service/service.twirp.dart';
 
 Future main(List<String> args) async {
-  var service = DefaultHaberdasher('http://apptree.ngrok.io');
+  var service = History('http://apptree.ngrok.io');
   try {
-    var hat = await service.makeHat(Size(inches: 10), type: ReqType.json);
-    hat.color = '';
-    print(hat);
-
-    // hat.dictionary["Test"] = 1;
-    // hat.dictionary["Test2"] = 2;
-    // hat.createdOn = new DateTime.now();
-    // hat.dictionaryWithMessage["BackupSize"] = new Size(20);
-    // var boughtHat = await service.buyHat(hat);
-    // print(boughtHat);
+    var result = await service.getHistory(
+        HistoryRequest(symbol: 'BTC', limit: 100, interval: '1h'),
+        type: ReqType.protobuf);
+    print(result);
   } on Exception catch (e) {
     print("->${e.toString()}");
   } catch (e) {

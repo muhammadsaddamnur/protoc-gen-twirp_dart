@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package CoinbitPublicApi;
+
+service History {
+	rpc GetHistory(HistoryRequest) returns (HistoryResponse);
+}
+
+message HistoryRequest{
+	string symbol = 1;
+	string interval = 2;
+	uint64 start_time = 3;
+	uint64 end_time = 4;
+	uint32 limit = 5;
+}
+
+message HistoryResponse{
+	repeated uint64 t = 1;
+	repeated string o = 2;
+	repeated string h = 3;
+	repeated string l = 4;
+	repeated string c = 5;
+	repeated float v = 6;
+}

@@ -1,8 +1,11 @@
 name: darttwirp
 version: 1.19.0
+publish_to: 'none' 
+
 environment:
   sdk: ">=1.24.3 <3.0.0"
 dependencies:
-  twirp_dart_core: any
+  twirp_dart_core:
+    git: 'https://github.com/muhammadsaddamnur/twirp_dart_core'
   protobuf: ^2.0.1
   http: ^0.13.4
