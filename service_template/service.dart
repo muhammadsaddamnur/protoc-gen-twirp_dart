@@ -1,5 +1,4 @@
 // import 'dart:async';
-// import 'package:http/http.dart';
 // import 'package:twirp_dart_core/twirp_dart_core.dart';
 // import 'dart:convert';
 // import '../model/model.pb.dart';
@@ -14,10 +13,10 @@
 
 // class DefaultHaberdasher {
 //   final String hostname;
-//   Client requester;
+//   http.Client requester;
 //   final _pathPrefix = "/twirp/config.service.Haberdasher/";
 
-//   DefaultHaberdasher(this.hostname, {Client requester}) {
+//   DefaultHaberdasher(this.hostname, {http.Client requester}) {
 //     if (requester == null) {
 //       requester = http.Client();
 //     } else {
@@ -56,7 +55,7 @@
 //     return value;
 //   }
 
-//   Exception twirpException(Response response) {
+//   Exception twirpException(http.Response response) {
 //     try {
 //       var value = json.decode(response.body);
 //       return new TwirpJsonException.fromJson(value);

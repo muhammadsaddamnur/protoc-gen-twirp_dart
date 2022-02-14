@@ -2,13 +2,13 @@ import 'dart:async';
 
 // import 'config/model/model.twirp.dart';
 import 'config/model/model.pb.dart';
-import 'config/service/test.dart';
+import 'config/service/service.twirp.dart';
 // import 'config/service/service.twirp.dart';
 
 Future main(List<String> args) async {
   var service = DefaultHaberdasher('http://apptree.ngrok.io');
   try {
-    var hat = await service.makeHat(Size(inches: 10), type: ReqType.protobuf);
+    var hat = await service.makeHat(Size(inches: 10), type: ReqType.json);
     hat.color = '';
     print(hat);
 

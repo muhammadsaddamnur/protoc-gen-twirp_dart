@@ -11,7 +11,7 @@ go build ../main.go
 #protoc -I . --twirp-dart_out=dart_client config/service/service.proto
 
 # for dart client
-protoc -I . --plugin=protoc-gen-custom=./main --custom_out=dart_client config/model/model.proto
+# protoc -I . --plugin=protoc-gen-custom=./main --custom_out=dart_client config/model/model.proto
 protoc -I . --plugin=protoc-gen-custom=./main --custom_out=dart_client config/service/service.proto
 
 # additional
