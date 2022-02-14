@@ -63,6 +63,8 @@ Future main(List<String> args) async {
   }
 }
 ```
+
+you can generate with generate.sh, run this command `sh generate.sh`
     
 ### Parameters
 
@@ -93,3 +95,6 @@ In a new terminal run the client:
 - install `go install protoc-gen-twirp_dart`    
 - cd to example folder `cd example`
 - generate twirp `protoc --twirp_dart_out=dart_client config/service/service.proto`
+
+or you can generate with running Makefile
+- run this command on root folder `make install`
