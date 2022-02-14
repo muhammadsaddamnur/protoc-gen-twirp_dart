@@ -1,15 +1,18 @@
 package main
 
 import (
-	"github.com/apptreesoftware/protoc-gen-twirp_dart/generator"
-	"github.com/gogo/protobuf/protoc-gen-gogo/plugin"
 	"io"
 	"io/ioutil"
 	"os"
 	"strings"
 
+	// "github.com/apptreesoftware/protoc-gen-twirp_dart/generator" // before
+	"protoc-gen-twirp_dart/generator" // after
+
+	"github.com/gogo/protobuf/proto"
+
 	gogogen "github.com/gogo/protobuf/protoc-gen-gogo/generator"
-	"github.com/golang/protobuf/proto"
+	plugin_go "github.com/gogo/protobuf/protoc-gen-gogo/plugin"
 )
 
 func main() {

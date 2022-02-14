@@ -81,3 +81,15 @@ In a new terminal run the client:
     cd example/dart_client
     pub get
     dart main.dart
+
+
+## Customize Template
+- edit template on `client.go` file
+- cd on root folder `protoc-gen-twirp_dart`
+- `go mod init protoc-gen-twirp_dart`
+- `go mod tidy`
+- we will using local generator, please change to import module on main.go `"protoc-gen-twirp_dart/generator"` (local generator)
+- build this package `go build .`
+- install `go install protoc-gen-twirp_dart`    
+- cd to example folder `cd example`
+- generate twirp `protoc --twirp_dart_out=dart_client config/service/service.proto`

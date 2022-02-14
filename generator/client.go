@@ -12,6 +12,8 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
 	"github.com/gogo/protobuf/protoc-gen-gogo/generator"
+
+	plugin_go "github.com/gogo/protobuf/protoc-gen-gogo/plugin"
 )
 
 const apiTemplate = `
@@ -132,7 +134,6 @@ class Default{{.Name}} implements {{.Name}} {
 	}
 
     {{range .Methods}}
-	wkwk
 	Future<{{.OutputType}}>{{.Name}}({{.InputType}} {{.InputArg}}) async {
 		var url = "${hostname}${_pathPrefix}{{.Path}}";
 		var uri = Uri.parse(url);
